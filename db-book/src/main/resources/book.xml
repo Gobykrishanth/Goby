@@ -1,0 +1,32 @@
+<library>
+    <book>
+        <title>To Kill a Mockingbird</title>
+        <author>Harper Lee</author>
+        <category>Fiction</category>
+        <year>1960</year>
+    </book>
+    <book>
+        <title>1984</title>
+        <author>George Orwell</author>
+        <category>Dystopian Fiction</category>
+        <year>1949</year>
+    </book>
+    <book>
+        <title>The Catcher in the Rye</title>
+        <author>J.D. Salinger</author>
+        <category>Coming-of-age Fiction</category>
+        <year>1951</year>
+    </book>
+    <book>
+        <title>Pride and Prejudice</title>
+        <author>Jane Austen</author>
+        <category>Romance</category>
+        <year>1813</year>
+    </book>
+    <book>
+        <title>The Lord of the Rings</title>
+        <author>J.R.R. Tolkien</author>
+        <category>Fantasy</category>
+        <year>1954</year>
+    </book>
+</library>

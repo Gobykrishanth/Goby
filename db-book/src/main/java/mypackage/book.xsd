@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="library" type="libraryType"/>
+  <xs:complexType name="bookType">
+    <xs:sequence>
+      <xs:element name="title">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="To Kill a Mockingbird"/>
+            <xs:enumeration value="1984"/>
+            <xs:enumeration value="The Catcher in the Rye"/>
+            <xs:enumeration value="Pride and Prejudice"/>
+            <xs:enumeration value="The Lord of the Rings"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="author">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Harper Lee"/>
+            <xs:enumeration value="George Orwell"/>
+            <xs:enumeration value="J.D. Salinger"/>
+            <xs:enumeration value="Jane Austen"/>
+            <xs:enumeration value="J.R.R. Tolkien"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="category">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Fiction"/>
+            <xs:enumeration value="Dystopian Fiction"/>
+            <xs:enumeration value="Coming-of-age Fiction"/>
+            <xs:enumeration value="Romance"/>
+            <xs:enumeration value="Fantasy"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="year">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="1960"/>
+            <xs:enumeration value="1949"/>
+            <xs:enumeration value="1951"/>
+            <xs:enumeration value="1813"/>
+            <xs:enumeration value="1954"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="libraryType">
+    <xs:sequence>
+      <xs:element type="bookType" name="book" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
