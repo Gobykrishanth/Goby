@@ -1,0 +1,59 @@
+ nav {
+    justify-content: center;
+    background-color: rgb(165, 165, 165);
+ }
+
+ ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+ }
+
+ article {
+    background-color: rgb(165, 165, 165);
+    /* width: 100%; */
+ }
+
+ footer {
+    justify-content: center;
+    bottom: 0%;
+    width: 100%;
+    background-color: rgb(165, 165, 165);
+ }
+
+ article div{
+   width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: justify;
+ }
+
+ Main div{
+   width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: justify;
+ }
+
+ form div{
+   width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: justify;
+ }
+
+footer ul li img{
+   float:left;
+}
+
+footer div {
+   display: inline;
+   float: right;
+}
+
+#Logo {
+   align-items: center;
+   margin-left: auto;
+   margin-right: auto;
+   width: 15%;
+}
