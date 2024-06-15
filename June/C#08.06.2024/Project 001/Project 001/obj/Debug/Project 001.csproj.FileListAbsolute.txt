@@ -1,7 +1,0 @@
-Z:\June\C#08.06.2024\Project 001\Project 001\bin\Debug\Project 001.exe.config
-Z:\June\C#08.06.2024\Project 001\Project 001\bin\Debug\Project 001.exe
-Z:\June\C#08.06.2024\Project 001\Project 001\bin\Debug\Project 001.pdb
-Z:\June\C#08.06.2024\Project 001\Project 001\obj\Debug\Project 001.csproj.AssemblyReference.cache
-Z:\June\C#08.06.2024\Project 001\Project 001\obj\Debug\Project 001.csproj.CoreCompileInputs.cache
-Z:\June\C#08.06.2024\Project 001\Project 001\obj\Debug\Project 001.exe
-Z:\June\C#08.06.2024\Project 001\Project 001\obj\Debug\Project 001.pdb
