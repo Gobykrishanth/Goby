@@ -1,0 +1,7 @@
+Z:\June\C#16.06.2024\Banking System\Banking System\bin\Debug\Banking System.exe.config
+Z:\June\C#16.06.2024\Banking System\Banking System\bin\Debug\Banking System.exe
+Z:\June\C#16.06.2024\Banking System\Banking System\bin\Debug\Banking System.pdb
+Z:\June\C#16.06.2024\Banking System\Banking System\obj\Debug\Banking System.csproj.AssemblyReference.cache
+Z:\June\C#16.06.2024\Banking System\Banking System\obj\Debug\Banking System.csproj.CoreCompileInputs.cache
+Z:\June\C#16.06.2024\Banking System\Banking System\obj\Debug\Banking System.exe
+Z:\June\C#16.06.2024\Banking System\Banking System\obj\Debug\Banking System.pdb
