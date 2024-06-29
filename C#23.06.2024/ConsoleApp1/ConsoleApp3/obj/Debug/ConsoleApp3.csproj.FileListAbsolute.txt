@@ -1,0 +1,7 @@
+Z:\June\C#23.06.2024\ConsoleApp1\ConsoleApp3\bin\Debug\ConsoleApp3.exe.config
+Z:\June\C#23.06.2024\ConsoleApp1\ConsoleApp3\bin\Debug\ConsoleApp3.exe
+Z:\June\C#23.06.2024\ConsoleApp1\ConsoleApp3\bin\Debug\ConsoleApp3.pdb
+Z:\June\C#23.06.2024\ConsoleApp1\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.AssemblyReference.cache
+Z:\June\C#23.06.2024\ConsoleApp1\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.CoreCompileInputs.cache
+Z:\June\C#23.06.2024\ConsoleApp1\ConsoleApp3\obj\Debug\ConsoleApp3.exe
+Z:\June\C#23.06.2024\ConsoleApp1\ConsoleApp3\obj\Debug\ConsoleApp3.pdb
