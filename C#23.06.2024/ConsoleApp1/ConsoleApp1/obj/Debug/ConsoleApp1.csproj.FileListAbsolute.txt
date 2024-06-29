@@ -1,7 +1,0 @@
-Z:\June\C#23.06.2024\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
-Z:\June\C#23.06.2024\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
-Z:\June\C#23.06.2024\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
-Z:\June\C#23.06.2024\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
-Z:\June\C#23.06.2024\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
-Z:\June\C#23.06.2024\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
-Z:\June\C#23.06.2024\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
