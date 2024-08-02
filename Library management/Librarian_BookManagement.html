@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Librarian UI</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .header {
+      text-align: center;
+      color: black;
+      font-size: 16px;
+      margin: 20px 0;
+    }
+
+    .sidebar {
+      width: 20%;
+      background-color: #D9D9D9;
+      padding: 20px;
+      border-radius: 22px;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin: 10px 0;
+      color: black;
+      font-size: 10px;
+    }
+
+    .quick-stats {
+      margin-top: 20px;
+      color: black;
+      font-size: 10px;
+    }
+
+    .main-content {
+      width: 80%;
+      padding: 20px;
+    }
+
+    .add-edit-book {
+      background-color: #D9D9D9;
+      border-radius: 22px;
+      padding: 20px;
+    }
+
+    .add-edit-book h2 {
+      color: black;
+      font-size: 16px;
+    }
+
+    form label {
+      display: block;
+      margin: 10px 0 5px;
+      color: black;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    form .buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    form .buttons button {
+      background-color: #50B6E2;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 32px;
+      cursor: pointer;
+    }
+
+    form .buttons button:hover {
+      background-color: #3A9DC9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <ul>
+        <li><img src="https://via.placeholder.com/24?text=BM" alt="Book Management"> Book Management</li>
+        <li><img src="https://via.placeholder.com/24?text=IM" alt="Inventory Management"> Inventory Management</li>
+        <li><img src="https://via.placeholder.com/24?text=MM" alt="Members Management"> Members Management</li>
+        <li><img src="https://via.placeholder.com/24?text=R" alt="Reports"> Reports</li>
+        <li><img src="https://via.placeholder.com/24?text=BLR" alt="Book Lending and Return"> Book Lending and Return</li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <header>
+        <div class="search-bar-container">
+          <div class="search-category">
+            <select>
+              <option value="" disabled selected>Search by Category</option>
+              <option value="genre">Genre</option>
+              <option value="author">Author</option>
+              <option value="publication-date">Publication Date</option>
+              <option value="title">Title</option>
+              <!-- Add more options as needed -->
+            </select>
+          </div>
+          <div class="search-bar">
+            <input type="text" placeholder="Search ..." />
+          </div>
+          <div class="icon" onclick="showHistoryPopup()">
+            <img src="https://via.placeholder.com/24x24?text=H" alt="History" />
+          </div>
+          <div class="icon">
+            <img src="https://via.placeholder.com/24x24?text=N" alt="Notifications" />
+          </div>
+          <div class="icon">
+            <img src="https://via.placeholder.com/24x24?text=S" alt="Settings" />
+          </div>
+          <div class="icon">
+            <img src="https://via.placeholder.com/24x24?text=H" alt="Help" />
+          </div>
+          <div class="profile-picture" onclick="showPopup()">
+            <img src="https://via.placeholder.com/48x48" alt="Profile Picture" />
+          </div>
+          <div class="logout">Logout</div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="dashboard-header">
+          <div class="greeting">
+            <h1>Hello, Admin!</h1>
+            <p id="currentDateTime"></p>
+          </div>
+          <div class="stats">
+            <div class="stat-item">
+              <h2>Total Members</h2>
+              <p>100</p> <!-- Replace with dynamic data -->
+            </div>
+            <div class="stat-item">
+              <h2>New Members</h2>
+              <p>10</p> <!-- Replace with dynamic data -->
+            </div>
+            <div class="stat-item">
+              <h2>Total Books</h2>
+              <p>1000</p> <!-- Replace with dynamic data -->
+            </div>
+            <div class="stat-item">
+              <h2>Borrowed Books</h2>
+              <p>50</p> <!-- Replace with dynamic data -->
+            </div>
+            <div class="stat-item">
+              <h2>Overdue Books</h2>
+              <p>5</p> <!-- Replace with dynamic data -->
+            </div>
+          </div>
+        </div>
+        <!-- Your main content goes here -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function updateDateTime() {
+      const dateTimeElement = document.getElementById('currentDateTime');
+      const now = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      dateTimeElement.textContent = now.toLocaleDateString('en-US', options);
+    }
+
+    updateDateTime();
+    setInterval(updateDateTime, 1000); // Update date and time every second
+  </script>
+</body>
+</html>

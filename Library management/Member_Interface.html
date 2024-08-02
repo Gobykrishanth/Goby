@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Hub</title>
+  <link rel="stylesheet" href="smma.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+    <div class="search-bar-container">
+      <div class="search-category">
+        <select>
+          <option value="" disabled selected>Search by Category</option>
+          <option value="genre">Genre</option>
+          <option value="author">Author</option>
+          <option value="publication-date">Publication Date</option>
+          <option value="title">Title</option>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search ..." />
+      </div>
+      <div class="icon" onclick="showHistoryPopup()">
+        <img src="https://via.placeholder.com/24x24?text=H" alt="History" />
+      </div>
+      <div class="icon">
+        <img src="https://via.placeholder.com/24x24?text=N" alt="Notifications" />
+      </div>
+      <div class="icon">
+        <img src="https://via.placeholder.com/24x24?text=S" alt="Settings" />
+      </div>
+      <div class="icon">
+        <img src="https://via.placeholder.com/24x24?text=H" alt="Help" />
+      </div>
+      <div class="profile-picture" onclick="showPopup()">
+        <img src="https://via.placeholder.com/48x48" alt="Profile Picture" />
+      </div>
+      <div class="logout">Logout</div>
+    </div>
+
+    <div class="container" id="bookContainer">
+      <!-- Book cards will be added here by JavaScript -->
+    </div>
+
+    <!-- Profile Edit Popup -->
+    <div class="popup" id="profilePopup">
+      <button class="close-btn" onclick="hidePopup()">&times;</button>
+      <h2>Edit Profile</h2>
+      <form>
+        <label for="profilePic">Profile Picture</label>
+        <input type="file" id="profilePic" accept="image/*" />
+
+        <label for="userName">Name</label>
+        <input type="text" id="userName" placeholder="Your Name" />
+
+        <label for="userEmail">Email</label>
+        <input type="email" id="userEmail" placeholder="Your Email" />
+
+        <label for="userPhone">Phone Number</label>
+        <input type="tel" id="userPhone" placeholder="Your Phone Number" />
+
+        <label for="userPassword">Password</label>
+        <input type="password" id="userPassword" placeholder="Your Password" />
+
+        <button type="submit" class="submit-btn">Save Changes</button>
+      </form>
+    </div>
+
+    <!-- Browsing History Popup -->
+    <div class="popup history-popup" id="historyPopup">
+      <button class="close-btn" onclick="hideHistoryPopup()">&times;</button>
+      <h2>Browsing History</h2>
+      <table id="historyTable">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Title</th>
+            <th>Borrowed Date</th>
+            <th>Returned Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows will be added here by JavaScript -->
+        </tbody>
+      </table>
+    </div>
+  </header>
+  </main>
+
+  <footer>
+    <p>© 2024 Book Hub</p>
+    <p>The Book Hub is a registered library management system in Sri Lanka, focusing on cultural relations and educational opportunities. Charity Registration Number: 209131 (Sri Lanka).</p>
+    <p class="slogan">Where Stories Come to Life</p>
+  </footer>
+
+  <script src="Member_Creation.js"></script>
+</body>
+</html>

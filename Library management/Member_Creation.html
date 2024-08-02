@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Hub</title>
+    <link rel="stylesheet" href="BookHubStyle.css">
+</head>
+<body>
+    <div id="memberCreationSection" class="container">
+        <h1>Create Account</h1>
+        <form id="memberCreationForm">
+            <div class="form-group">
+                <label for="createUsername">Username:</label>
+                <input type="text" id="createUsername" name="createUsername" required>
+            </div>
+            <div class="form-group">
+                <label for="createNIC">NIC No:</label>
+                <input type="text" id="createNIC" name="createNIC" 
+                       pattern="[0-9]{9}[vVxX]?" required 
+                       title="Please enter a valid NIC.">
+            </div>
+            <div class="form-group">
+                <label for="createEmail">Email Id:</label>
+                <input type="email" id="createEmail" name="createEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="createMobileNumber">Mobile Number:</label>
+                <input type="tel" id="createMobileNumber" name="createMobileNumber" 
+                       pattern="[0-9]{10}" required 
+                       title="Please enter a valid 10-digit mobile number.">
+            </div>
+            <div class="form-group">
+                <label for="createPassword">Password:</label>
+                <input type="password" id="createPassword" name="createPassword" required>
+            </div>
+            <button type="submit" class="btn">Register</button>
+        </form>
+        <p id="creationMessage"></p>
+        <p>Already have an account? <a href="login.html">Login here</a>.</p>
+    </div>
+    <script src="Member_Creation.js"></script>
+</body>
+</html>

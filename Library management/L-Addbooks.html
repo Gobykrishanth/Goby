@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .modal form {
+            display: flex;
+            flex-direction: column;
+        }
+        .modal form label {
+            margin: 10px 0 5px;
+        }
+        .modal form input,
+        .modal form textarea {
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .modal form button {
+            align-self: flex-end;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .modal form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Library Management</h1>
+
+    <h2>Book List</h2>
+    <table id="bookTable">
+        <thead>
+            <tr>
+                <th>Book ID</th>
+                <th>Title</th>
+                <th>Number of Copies</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>Book Title 1</td>
+                <td class="copies">5</td>
+                <td class="status"></td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Book Title 2</td>
+                <td class="copies">0</td>
+                <td class="status"></td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>Book Title 3</td>
+                <td class="copies">2</td>
+                <td class="status"></td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="button" id="addBookBtn">Add Book</button>
+
+    <h2>User List</h2>
+    <table id="userTable">
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>User Name</th>
+                <th>Book Borrowed At</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>John Doe</td>
+                <td class="borrowed-at">2024-07-01</td>
+                <td class="status"></td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Jane Smith</td>
+                <td class="borrowed-at">2024-08-10</td>
+                <td class="status"></td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>Emily Johnson</td>
+                <td class="borrowed-at">2024-06-20</td>
+                <td class="status"></td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="button" id="addUserBtn">Add User</button>
+
+    <!-- Modal for Adding Book -->
+    <div id="bookModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Add New Book</h2>
+            <form id="addBookForm">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author" required>
+
+                <label for="isbn">ISBN:</label>
+                <input type="text" id="isbn" name="isbn" required>
+
+                <label for="publisher">Publisher:</label>
+                <input type="text" id="publisher" name="publisher" required>
+
+                <label for="year">Year of Publication:</label>
+                <input type="number" id="year" name="year" required>
+
+                <label for="genre">Genre:</label>
+                <input type="text" id="genre" name="genre" required>
+
+                <label for="copies">Available Copies:</label>
+                <input type="number" id="copies" name="copies" required>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4"></textarea>
+
+                <label for="image">Image URL:</label>
+                <input type="text" id="image" name="image">
+
+                <button type="submit">Add Book</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal for Adding User -->
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeUserModal">&times;</span>
+            <h2>Add New User</h2>
+            <form id="addUserForm">
+                <div class="form-group">
+                    <label for="createUsername">Username:</label>
+                    <input type="text" id="createUsername" name="createUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="createNIC">NIC No:</label>
+                    <input type="text" id="createNIC" name="createNIC" 
+                           pattern="[0-9]{9}[vVxX]?" required 
+                           title="Please enter a valid NIC.">
+                </div>
+                <div class="form-group">
+                    <label for="createEmail">Email Id:</label>
+                    <input type="email" id="createEmail" name="createEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="createMobileNumber">Mobile Number:</label>
+                    <input type="tel" id="createMobileNumber" name="createMobileNumber" 
+                           pattern="[0-9]{10}" required 
+                           title="Please enter a valid 10-digit mobile number.">
+                </div>
+                <div class="form-group">
+                    <label for="createPassword">Password:</label>
+                    <input type="password" id="createPassword" name="createPassword" required>
+                </div>
+                <button type="submit">Add User</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function updateBookStatus() {
+            const rows = document.querySelectorAll('#bookTable tbody tr');
+            rows.forEach(row => {
+                const copies = parseInt(row.querySelector('.copies').textContent);
+                const statusCell = row.querySelector('.status');
+                if (copies > 0) {
+                    statusCell.textContent = 'Available';
+                } else {
+                    statusCell.textContent = 'Not Available';
+                }
+                if (copies === 0) {
+                    statusCell.textContent = 'Lost';
+                }
+            });
+        }
+
+        function updateUserStatus() {
+            const rows = document.querySelectorAll('#userTable tbody tr');
+            const today = new Date();
+            rows.forEach(row => {
+                const borrowedAt = new Date(row.querySelector('.borrowed-at').textContent);
+                const statusCell = row.querySelector('.status');
+                const diffInDays = Math.floor((today - borrowedAt) / (1000 * 60 * 60 * 24));
+                if (diffInDays > 30) {
+                    statusCell.textContent = 'Overdue';
+                } else {
+                    statusCell.textContent = 'Borrowed';
+                }
+            });
+        }
+
+        // Modal functionality for adding a book
+        const addBookBtn = document.getElementById('addBookBtn');
+        const bookModal = document.getElementById('bookModal');
+        const closeModal = document.getElementById('closeModal');
+
+        addBookBtn.onclick = function() {
+            bookModal.style.display = 'block';
+        }
+
+        closeModal.onclick = function() {
+            bookModal.style.display = 'none';
+        }
+
+        // Modal functionality for adding a user
+        const addUserBtn = document.getElementById('addUserBtn');
+        const userModal = document.getElementById('userModal');
+        const closeUserModal = document.getElementById('closeUserModal');
+
+        addUserBtn.onclick = function() {
+            userModal.style.display = 'block';
+        }
+
+        closeUserModal.onclick = function() {
+            userModal.style.display = 'none';
+        }
+
+        // Close the modal when clicking outside of it
+        window.onclick = function(event) {
+            if (event.target === bookModal) {
+                bookModal.style.display = 'none';
+            }
+            if (event.target === userModal) {
+                userModal.style.display = 'none';
+            }
+        }
+
+        // Call the functions to update status on page load
+        updateBookStatus();
+        updateUserStatus();
+    </script>
+</body>
+</html>

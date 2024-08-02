@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="book-lending-section">
+        <h2 class="section-header">Book Lending</h2>
+        
+        <div class="lending-form">
+            <h3>Lending Form</h3>
+            <p>
+                <label for="nic">Member NIC:</label>
+                <input type="text" id="nic" name="nic" placeholder="____________">
+            </p>
+            <p>
+                <label for="book-id">Book ID:</label>
+                <input type="text" id="book-id" name="book-id" placeholder="____________">
+            </p>
+            <p class="overdue-alert">Overdue Alert: <span>Member has overdue books</span></p>
+            <button type="button" class="lend-button">Lend Book</button>
+        </div>
+        
+        <div class="lending-history">
+            <h3>Lending History</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>NIC</th>
+                        <th>Book</th>
+                        <th>Lending Date</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Name1</td>
+                        <td>000211</td>
+                        <td>Book1</td>
+                        <td>10/10/2000</td>
+                        <td>17/10/2000</td>
+                        <td>On Time</td>
+                    </tr>
+                    <tr>
+                        <td>Name2</td>
+                        <td>000231</td>
+                        <td>Book2</td>
+                        <td>10/10/2000</td>
+                        <td>21/10/2000</td>
+                        <td>Overdue</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</body>
+</html>

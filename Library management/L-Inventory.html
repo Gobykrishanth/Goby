@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librarian UI</title>
+    <style>
+        body {
+            font-family: Inter, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 429px;
+            height: 347px;
+            position: relative;
+            background: white;
+            margin: 20px auto;
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar {
+            width: 112px;
+            height: 100%;
+            position: absolute;
+            background: #D9D9D9;
+            border-radius: 22px;
+            padding-top: 80px;
+        }
+        .sidebar-item {
+            width: 102px;
+            margin: 0 auto 15px;
+            background: white;
+            border-radius: 22px;
+            text-align: center;
+            font-size: 7px;
+            padding: 10px 0;
+        }
+        .sidebar-item .icon {
+            width: 36px;
+            height: 36px;
+            background: #D9D9D9;
+            border-radius: 9999px;
+            margin: 0 auto 10px;
+        }
+        .main-content {
+            width: 256px;
+            height: 225px;
+            position: absolute;
+            top: 80px;
+            left: 159px;
+            background: #D9D9D9;
+            border-radius: 22px;
+            padding: 10px;
+        }
+        .main-content .header {
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .main-content .section-title {
+            font-size: 10px;
+            margin: 10px 0;
+        }
+        .main-content .search-add {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .main-content .search-add div {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .main-content .search-add .checkbox {
+            width: 14px;
+            height: 14px;
+            background: #1D1B20;
+            margin-right: 5px;
+        }
+        .main-content .book-list {
+            font-size: 7px;
+            line-height: 1.5;
+        }
+        .main-content .book-list .actions {
+            display: flex;
+            justify-content: space-between;
+        }
+        .main-content .book-list .actions div {
+            cursor: pointer;
+            color: blue;
+        }
+        .main-content .pagination {
+            text-align: center;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-item">
+                <div class="icon"></div>
+                Dashboard
+            </div>
+            <div class="sidebar-item">
+                Book Management<br/>Inventory<br/>Members<br/>Reports<br/>Book Lending and Return
+            </div>
+            <div class="sidebar-item">
+                Quick Stats<br/><br/>Total Books: [x]<br/>Total Members: [Y]<br/>Books Borrowed: [Z]
+            </div>
+            <div class="sidebar-item">
+                Recent Activity Feed<br/><br/>Activity 1<br/>Activity 2<br/>Activity 3
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="header">Librarian UI</div>
+            <div class="section-title">Inventory Management</div>
+            <div class="search-add">
+                <div>
+                    <div class="checkbox"></div>
+                    <span>Search book</span>
+                </div>
+                <div>
+                    <span>Add book</span>
+                </div>
+            </div>
+            <div class="book-list">
+                <div>Title &nbsp; Author &nbsp; ISBN &nbsp; Quantity &nbsp; Status &nbsp; Action</div>
+                <div>
+                    <div>Book1 &nbsp; Author &nbsp; 001 &nbsp; 10 &nbsp; Available &nbsp;
+                        <span class="actions">
+                            <div>Edit</div>/<div>Del</div>
+                        </span>
+                    </div>
+                    <div>Book2 &nbsp; Author &nbsp; 051 &nbsp; 12 &nbsp; Checkout &nbsp;
+                        <span class="actions">
+                            <div>Edit</div>/<div>Del</div>
+                        </span>
+                    </div>
+                    <div>Book3 &nbsp; Author &nbsp; 016 &nbsp; 1 &nbsp; On Hold &nbsp;
+                        <span class="actions">
+                            <div>Edit</div>/<div>Del</div>
+                        </span>
+                    </div>
+                </div>
+                <div class="pagination">
+                    [Previous] 1 of 10 [Next]
+                </div>
+                <div>Recently Added Books</div>
+                <div>
+                    <div>Book1 &nbsp; Author &nbsp; 10/10/2000 &nbsp; <span class="actions">
+                        <div>Edit</div>/<div>Del</div>
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
